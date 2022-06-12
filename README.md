@@ -6,7 +6,7 @@
 
 Dersom det kommer feilmelding, kjør
 
-```git reset --gard HEAD```
+```git reset --hard HEAD```
 
 så ny ```git pull```
 
