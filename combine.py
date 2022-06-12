@@ -43,21 +43,16 @@ print("\nD 21-E, første startnr " + str(d_first_startno) + "\n")
 print(d21e)
 print(len(d21e.index))
 
-#df = df.drop(columns = ['WRS_POINTS'])
-
 merged = pd.concat([h21e, d21e]	)
 print("Skriver til fil WRE_Eventor_merged.xlsx...")
-
 merged.to_excel('WRE_Eventor_merged.xlsx', index=False)
 
-#print("\n\nSkriver H 21-E til fil h21e.xlsx ...")
-#h21e.to_excel('h21e.xlsx', index=False)
 
-#print("Skriver D 21-E til fil d21e.xlsx ...")
-#d21e.to_excel('d21e.xlsx', index=False)
+print("Skriver SQL til update_startno.sql...")
+merged = merged.reset_index()  # make sure indexes pair with number of rows
 
-# 
-# https://pbpython.com/pandas-excel-tabs.html
-#			 https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.concat.html
-
+with open('update_startno.sql', 'w') as f:
+	f.write("COMMAND;\n")
+	for index, row in merged.iterrows():
+		f.write("UPDATE NAME SET STARTNO='" + str(row['STARTNO']) + "' WHERE KID='" + str(row['Person-id']) + "';\n")
 
