@@ -17,3 +17,5 @@ så ny ```git pull```
 eksempel
 
 ```python combine.py WRE_Eventor.xlsx 101 201```
+
+Produserer en Excel-fil med WRE-ranking og startnummer samt SQL-fil til bruk i eTiming for å oppdatere startnummer.
