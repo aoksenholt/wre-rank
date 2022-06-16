@@ -19,4 +19,4 @@ amplifytools.xcconfig
 **.sample
 #amplify-do-not-edit-end
 
-.rootkey.csv
+rootkey.csv
