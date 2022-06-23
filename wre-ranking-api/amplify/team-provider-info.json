@@ -15,7 +15,7 @@
       "function": {
         "wrerankingapi": {
           "deploymentBucketName": "amplify-wrerankingapi-dev-122122-deployment",
-          "s3Key": "amplify-builds/wrerankingapi-68544d637a3856394965-build.zip"
+          "s3Key": "amplify-builds/wrerankingapi-414e4732767173592b67-build.zip"
         }
       }
     }
