@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App(data) {
   return (
     <div className="App">
       <header className="App-header">
@@ -16,6 +16,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
+          {{ data }}
         </a>
       </header>
     </div>

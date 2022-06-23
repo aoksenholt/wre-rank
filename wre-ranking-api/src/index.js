@@ -12,11 +12,13 @@ Amplify.configure(config)
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App data={{getData}}/>
   </React.StrictMode>
 );
 
 const getData = async () => {
   const data = await API.get('wrerankingapi', '/seed')
   console.log(data)
+
+  return data
 }
