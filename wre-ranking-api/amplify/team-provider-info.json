@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-wrerankingapi-dev-122122-authRole",
+      "UnauthRoleArn": "arn:aws:iam::784244179940:role/amplify-wrerankingapi-dev-122122-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::784244179940:role/amplify-wrerankingapi-dev-122122-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-wrerankingapi-dev-122122-deployment",
+      "UnauthRoleName": "amplify-wrerankingapi-dev-122122-unauthRole",
+      "StackName": "amplify-wrerankingapi-dev-122122",
+      "StackId": "arn:aws:cloudformation:eu-north-1:784244179940:stack/amplify-wrerankingapi-dev-122122/3b2a1d40-f2de-11ec-bbbf-0a10afce89ca",
+      "AmplifyAppId": "d1ez8r9t5xpc9s"
+    },
+    "categories": {
+      "function": {
+        "wrerankingapi": {
+          "deploymentBucketName": "amplify-wrerankingapi-dev-122122-deployment",
+          "s3Key": "amplify-builds/wrerankingapi-58444e4a6b5356545258-build.zip"
+        }
+      }
+    }
+  }
+}
