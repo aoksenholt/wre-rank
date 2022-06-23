@@ -1,6 +1,7 @@
 import awsgi
 import base64
 import pandas as pd
+import io
 
 from flask_cors import CORS
 from flask import Flask, jsonify, request
@@ -30,5 +31,12 @@ def perform_merge():
     print("Først startnummer damer: " + str(women_first_startno))
 
     excel_file_decoded=base64.b64decode(excel_base64_content)
+
+    f=io.BytesIO()
+    f.write(excel_file_decoded)
+
+    all_dfs = pd.read_excel(f, sheet_name=None)
+
+    print(all_dfs)
 
     return jsonify(message="merge performed")
