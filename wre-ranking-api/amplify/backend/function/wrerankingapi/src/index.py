@@ -1,5 +1,7 @@
 from crypt import methods
+from email.mime import base
 import awsgi
+import base64
 
 from flask_cors import CORS
 from flask import Flask, jsonify, request
@@ -23,8 +25,11 @@ def perform_merge():
 
     men_first_startno=request_json.get("men_first_startno")
     women_first_startno=request_json.get("women_first_startno")
+    excel_base64_content=request_json.get("excel_file_content")
 
     print("Først startnummer menn: " + str(men_first_startno))
     print("Først startnummer damer: " + str(women_first_startno))
+
+    excel_file_decoded=base64.b64decode(excel_base64_content)
 
     return jsonify(message="merge performed")
