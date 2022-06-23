@@ -1,2 +1,6 @@
+aws-wsgi
+boto3
+flask
+flask-cors
 pandas
-openpyxl
+pipenv
