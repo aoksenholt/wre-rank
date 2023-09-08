@@ -15,8 +15,8 @@ print("Leser data fra: " + innfil + " ...")
 
 all_dfs = pd.read_excel(innfil, sheet_name=None)
 
-women_df = all_dfs['WOMEN'].rename(columns = {'IOF ID':'IOF_ID'})
-men_df = all_dfs['MEN']
+women_df = all_dfs['WOMEN'].rename(columns = {'IOF ID':'IOF_ID', 'WRS points':'WRS_POINTS'})
+men_df = all_dfs['MEN'].rename(columns = {'IOF ID':'IOF_ID', 'WRS points':'WRS_POINTS'})
 etime_df = all_dfs['EVENTOR'].rename(columns = {'IOF-person-id':'IOF_ID'})
 
 all_df = pd.concat([women_df, men_df])
